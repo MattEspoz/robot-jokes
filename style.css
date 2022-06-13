@@ -1,0 +1,113 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding:0;
+  min-height: 100vh;
+  background-color:#45badd;
+}
+
+.container{
+  height:100vh;
+  width:100vw;
+  background-image:url('./robot.gif');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position:left center;
+}
+
+.header{
+  text-align:center;
+  color:#fff;
+  line-height: 0.5;
+}
+.header h1{
+  font-family:'Montserrat Alternates', sans-serif;
+  font-size: 60px;
+  text-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.4);
+}
+.header p{
+  font-family:'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight:600;
+  text-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.4);
+}
+
+.flex-container{
+  height:70vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-container button{
+  outline:none;
+  cursor: pointer;
+  padding:1.5rem 2rem;
+  background:linear-gradient(to top,#ff5d9e,#ff427f);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:2rem;
+  font-weight:400;
+  border:none;
+  border-radius:0.7rem;
+  box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.4);
+
+}
+
+#textMsg {
+  display: none;
+  text-transform: uppercase;
+  max-width: 32rem;
+  margin-left: 10rem;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2);
+  word-break: break-all;
+  overflow: hidden;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translate(0,0.3rem);
+  
+}
+
+button:disabled {
+  filter: brightness(30%);
+  cursor: default;
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: left center;
+    background-size: cover;
+  }
+
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.65 );
+  }
+
+  #textMsg {
+    width: 90%;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
